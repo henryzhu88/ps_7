@@ -10,8 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 library(janitor)
 library(tidyverse)
 library(readxl)
-spring2019 <- read_xlsx("class_enrollment_summary_by_term_3.22.19.xlsx")
-spring2016 <- read_xlsx("course_enrollment_statistics_0.xlsx")
+spring2019 <- read_xlsx("class_enrollment_summary_by_term_3.22.19.xlsx", skip=3) %>%
+  clean_names() %>%
+  select(course_title, course_name, course_department, u_grad,total)
+
+spring2018 <- read_xlsx("class_enrollment_summary_by_term_03.06.18 (3).xlsx", skip=3) %>%
+  clean_names() %>%
+  select(course_title, course_name, course_department, u_grad,total)
 ```
 
 ```{r, include=TRUE, echo=FALSE}
