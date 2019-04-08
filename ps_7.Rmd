@@ -1,0 +1,18 @@
+---
+title: "ps_7"
+author: "Henry Zhu"
+date: "April 8, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(janitor)
+library(tidyverse)
+library(readxl)
+spring2019 <- read_xlsx("class_enrollment_summary_by_term_3.22.19.xlsx")
+spring2016 <- read_xlsx("course_enrollment_statistics_0.xlsx")
+```
+
+```{r, include=TRUE, echo=FALSE}
+```
